@@ -1,34 +1,20 @@
 .imgui-window {
-  clip-path: polygon(
-    0% 0%,
-    0% 100%,
-    25% 100%,
-    25% 25%,
-    75% 25%,
-    75% 75%,
-    25% 75%,
-    25% 100%,
-    100% 100%,
-    100% 0%
-  );
-
   position: fixed;
+  width: 590px;
+  height: 380px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   width: 595px;
   height: 380px;
   background-color: #151617;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto auto;
   border-radius: 8px;
-  outline-width: 1px;
-  outline-style: solid;
-  outline-offset: -1;
-  outline-color: rgba(70, 70, 82, 0.5);
-  animation: window-pop 1s ease-in-out;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(70, 70, 82, 0.5);
+  animation: window-pop ease-out 0.6s;
 }
 
 .imgui-window__topbar {
@@ -70,10 +56,14 @@
 
 @keyframes window-pop {
   0% {
-    left: 100px;
+    width: 30px;
+    opacity: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 100%);
   }
 
-  100% {
-    left: 20px;
+  40% {
+    height: 180px;
   }
 }
