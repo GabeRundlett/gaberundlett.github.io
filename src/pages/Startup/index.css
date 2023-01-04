@@ -1,4 +1,10 @@
 .startup {
-  background-color: #6873e8;
+  background-color: #ff00ff;
+  width: 100vw;
   height: 100vh;
+  display: flex;
+}
+
+.startup .container {
+  position: absolute;
 }
