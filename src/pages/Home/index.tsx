@@ -1,5 +1,13 @@
+import './index.css';
+
 const Home = () => {
-  return <div>home</div>;
+  return (
+    <div className="home">
+      <div className="container">
+        <div>Gabe Rundlett</div>
+      </div>
+    </div>
+  );
 };
 
 export default Home;

@@ -1,13 +1,25 @@
+import { useEffect, useState } from 'react';
 import ImguiWindow from '../../components/ImguiWindow';
+import Home from '../Home';
 import './index.css';
 
 const Startup = () => {
+  const [imguiWindowVisible, setImguiWindowVisible] = useState(true);
+
+  // useEffect(() => {
+  //   return () => {
+  //     setTimeout(() => {
+  //       setImguiWindowVisible(false);
+  //     }, 1500);
+  //   };
+  // });
+
   return (
     <div className="startup">
-      <div className="container">
-        <ImguiWindow></ImguiWindow>
-      </div>
-      <h1>hello</h1>
+      {imguiWindowVisible ? (
+        <ImguiWindow background={true}></ImguiWindow>
+      ) : null}
+      <Home></Home>
     </div>
   );
 };
