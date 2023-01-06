@@ -15,11 +15,12 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 .imgui-window {
   position: absolute;
-
   display: flex;
   z-index: 10;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px;
@@ -30,10 +31,7 @@
   background-color: #18181c;
   outline: 1px hsl(240, 8%, 35%) solid;
   outline-offset: -1px;
-  visibility: hidden;
-  animation: window-pop ease-out 0.3s forwards;
-
-  animation-delay: 0.3s;
+  animation: window-pop ease-out 0.3s normal;
 
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
@@ -95,6 +93,7 @@
   padding: 20px;
   color: white;
   white-space: nowrap;
+  animation: text ease-out 0.3s forwards;
 }
 
 @keyframes window-pop {
@@ -102,7 +101,6 @@
     left: 50%;
     top: 100%;
     transform: translate(-50%, 0%);
-    font-size: 0px;
     width: 64px;
     height: 32px;
     opacity: 0;
@@ -115,21 +113,12 @@
     transform: translate(-50%, -50%);
     visibility: visible;
     margin-top: 0px;
-    font-size: 10px;
   }
 }
 
 @keyframes text {
   0% {
-    font-size: 1px;
-  }
-
-  40% {
     font-size: 5px;
-  }
-
-  70% {
-    font-size: 20px;
   }
 
   100% {
