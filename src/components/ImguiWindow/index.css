@@ -12,8 +12,6 @@
 .imgui-canvas {
   position: absolute;
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -21,6 +19,7 @@
 
 .imgui-window {
   position: absolute;
+
   display: flex;
   z-index: 10;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px;
@@ -32,7 +31,7 @@
   outline: 1px hsl(240, 8%, 35%) solid;
   outline-offset: -1px;
   visibility: hidden;
-  animation: window-pop ease-out 0.5s forwards;
+  animation: window-pop ease-out 0.3s forwards;
 
   animation-delay: 0.3s;
 
@@ -100,15 +99,20 @@
 
 @keyframes window-pop {
   0% {
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0%);
     font-size: 0px;
-    margin-top: 50vh;
-    width: 128px;
-    height: 64px;
+    width: 64px;
+    height: 32px;
     opacity: 0;
     outline: 1px #535362 solid;
   }
 
   100% {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     visibility: visible;
     margin-top: 0px;
     font-size: 10px;
