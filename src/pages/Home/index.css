@@ -1,5 +1,13 @@
 .home {
-  background: rgb(106, 126, 226);
-  width: 100vw;
+  background: red;
   height: 100vh;
+
+  background-image: url(../../assets/images/voxel-world.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.home img {
+  width: 100%;
+  height: auto;
 }

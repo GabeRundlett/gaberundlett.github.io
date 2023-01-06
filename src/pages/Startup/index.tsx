@@ -4,21 +4,9 @@ import Home from '../Home';
 import './index.css';
 
 const Startup = () => {
-  const [imguiWindowVisible, setImguiWindowVisible] = useState(true);
-
-  // useEffect(() => {
-  //   return () => {
-  //     setTimeout(() => {
-  //       setImguiWindowVisible(false);
-  //     }, 1500);
-  //   };
-  // });
-
   return (
     <div className="startup">
-      {imguiWindowVisible ? (
-        <ImguiWindow background={true}></ImguiWindow>
-      ) : null}
+      <ImguiWindow background={true}></ImguiWindow>
       <Home></Home>
     </div>
   );
