@@ -1,8 +1,21 @@
+import { useState } from 'react';
+import { useScrollBlock } from '../../hooks/useScrollBlock';
 import './index.css';
-
-import VoxelBackground from '../../assets/images/voxel-world.png';
+import Startup from '../../components/Startup';
 
 const Home = () => {
+  const [showStartup, setShowStartup] = useState(true);
+
+  if (showStartup)
+    return (
+      <Startup
+        onClick={() => {
+          setShowStartup((oldState) => !oldState);
+          console.log('hello');
+        }}
+      ></Startup>
+    );
+
   return (
     <div className="home">
       <div className="hero-space">
