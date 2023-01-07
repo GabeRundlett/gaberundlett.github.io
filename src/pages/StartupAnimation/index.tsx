@@ -1,12 +1,11 @@
 import Draggable from 'react-draggable';
 import './index.css';
-import { useRef, useState } from 'react';
+import { CSSProperties, useRef, useState } from 'react';
+import ReactDOM from 'react-dom';
+import Home from '../Home';
 
-interface ImguiWindow {
-  background?: boolean;
-}
-
-const ImguiWindow = ({ background = false }: ImguiWindow) => {
+const ImguiWindow = () => {
+  const openTime = 500;
   const [isDragging, setIsDragging] = useState(false);
   const [removeWindow, setRemoveWindow] = useState(false);
   const [windowMode, setWindowMode] = useState<'windowed' | 'fullscreen'>(
@@ -21,7 +20,7 @@ const ImguiWindow = ({ background = false }: ImguiWindow) => {
         setTimeout(() => {
           setWindowMode('windowed');
           setRemoveWindow(true);
-        }, 1000);
+        }, openTime);
         break;
 
       case 'fullscreen':
@@ -31,11 +30,17 @@ const ImguiWindow = ({ background = false }: ImguiWindow) => {
   };
 
   if (removeWindow) {
-    return null;
+    return <Home></Home>;
   } else
-    return (
-      <div className="imgui-canvas">
-        {background ? <div className="imgui-background"></div> : null}
+    return ReactDOM.createPortal(
+      <div
+        className="imgui-canvas"
+        style={
+          {
+            '--openTime': `${openTime / 1000}s`
+          } as CSSProperties
+        }
+      >
         <Draggable
           disabled={windowMode === 'windowed' ? false : true}
           nodeRef={nodeRef}
@@ -67,7 +72,9 @@ const ImguiWindow = ({ background = false }: ImguiWindow) => {
             </div>
           </div>
         </Draggable>
-      </div>
+      </div>,
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      document.getElementById('imgui-portal')!
     );
 
   function onDrag() {

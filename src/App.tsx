@@ -1,8 +1,8 @@
 import './index.css';
-import Startup from './pages/Startup';
+import StartupAnimation from './pages/StartupAnimation';
 
 function App() {
-  return <Startup></Startup>;
+  return <StartupAnimation></StartupAnimation>;
 }
 
 export default App;

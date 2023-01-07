@@ -1,22 +1,16 @@
-.imgui-background {
-  z-index: 1;
-  position: fixed;
-  left: 0;
-  top: 0;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  background-color: #151517;
-}
-
 .imgui-canvas {
+  z-index: 100;
   position: absolute;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
+  display: flex;
+  overflow: hidden;
+  background-color: #151517;
+  overflow-y: scroll;
 }
 
 .imgui-window__windowed {
@@ -36,7 +30,7 @@
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
-  transition: width 0.2s, height 0.2s transform 0.2s;
+  transition: width var(--test), height var(--test) transform var(--test);
 }
 
 .imgui-window__windowed:hover {
@@ -52,14 +46,15 @@
   display: flex;
   z-index: 10;
   margin: auto;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
   background-color: #18181c;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
-  transition: width 0.2s, height 0.2s, transform 0.2s;
+  transition: width var(--openTime), height var(--openTime),
+    transform var(--openTime);
 }
 
 .imgui-window__topbar__windowed {
@@ -115,7 +110,7 @@
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
-  transition: background-size 0.2s ease-out;
+  transition: background-size var(--openTime) ease-out;
 }
 
 .imgui-window__content__windowed h2 {
@@ -123,10 +118,11 @@
   margin: 0;
   padding: 20px;
   color: #fff;
+  font-family: 'Montserrat', sans-serif;
   white-space: nowrap;
   font-size: 20px;
   animation: text ease-out 0.3s;
-  transition: font-size 0.2s;
+  transition: font-size var(--openTime);
 }
 
 .imgui-window__content__windowed button {
@@ -145,7 +141,7 @@
   color: #fff;
   outline: 1px rgb(255, 255, 255, 20%) solid;
   outline-offset: -1px;
-  transition: background 0.2s, outline-color 0.2s, transform;
+  transition: background var(--openTime), outline-color var(--openTime);
 }
 
 .imgui-window__content__windowed button:active {
@@ -167,13 +163,14 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  transition: background-size 0.2s ease-out;
+  transition: background-size var(--openTime) ease-out;
 }
 
 .imgui-window__content__fullscreen h2 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   color: #fff;
-  transition: font-size 0.2s;
+  transition: font-size var(--openTime);
 }
 
 .imgui-window__content__fullscreen button {
