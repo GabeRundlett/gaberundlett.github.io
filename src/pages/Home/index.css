@@ -8,29 +8,33 @@
   position: relative;
 }
 
+.banner__focused .landscape,
+.banner__unfocused .landscape {
+  position: fixed;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+
 .banner__focused,
 .banner__unfocused {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  background-image: url(../../assets/images/voxel-world.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   width: 100%;
   height: 100%;
 }
 
-.home .hero-space .banner__focused .text {
+.banner__focused .text {
   display: inline-flex;
   align-items: center;
   flex-direction: column;
   filter: opacity(100%);
   transition: filter 0.5s;
 }
-.home .hero-space .banner__unfocused .text {
+.banner__unfocused .text {
   display: inline-flex;
   align-items: center;
   flex-direction: column;

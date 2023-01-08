@@ -3,6 +3,7 @@ import './index.css';
 import Startup from '../../components/Startup';
 import { useInView } from 'react-intersection-observer';
 import Navbar from '../../components/Navbar';
+import BackgroundImage from '../../assets/images/voxel-world.png';
 
 const Home = () => {
   const [showStartup, setShowStartup] = useState(true);
@@ -25,6 +26,11 @@ const Home = () => {
       <Navbar show={inView}></Navbar>
       <div className="hero-space">
         <div className={`banner__${inView ? 'unfocused' : 'focused'}`}>
+          <img
+            src={BackgroundImage}
+            className="landscape"
+            alt={'a beautiful voxel landscape'}
+          ></img>
           <div className="text">
             <h1>Gabe Rundlett</h1>
             <h2>
