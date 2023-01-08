@@ -1,6 +1,9 @@
 #root {
   background-color: white;
   font-family: 'Montserrat', sans-serif;
+  --blurple: #606be2;
+  --snow: #dbe5f0;
+  --section-max-width: 75rem;
 }
 
 body {

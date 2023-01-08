@@ -1,6 +1,5 @@
 import './index.css';
 import { useState } from 'react';
-import ReactDOM from 'react-dom';
 import ImguiWindow, { WindowType } from '../ImguiWindow';
 
 interface IStartup {
@@ -19,7 +18,7 @@ const Startup = ({ onClick }: IStartup) => {
     }, windowDelay);
   };
 
-  return ReactDOM.createPortal(
+  return (
     <div className="imgui-canvas">
       <ImguiWindow
         title="Gabe Rundlett"
@@ -42,9 +41,7 @@ const Startup = ({ onClick }: IStartup) => {
           </button>
         </div>
       </ImguiWindow>
-    </div>,
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    document.getElementById('imgui-portal')!
+    </div>
   );
 
   function onDrag() {
