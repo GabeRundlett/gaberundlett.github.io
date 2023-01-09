@@ -3,14 +3,16 @@ import './index.css';
 import Startup from '../../components/Startup';
 import { useInView } from 'react-intersection-observer';
 import Navbar from '../../components/Navbar';
+
 import BackgroundImage from '../../assets/images/voxel-world.png';
+import DaxaImage from '../../assets/images/daxa.png';
 
 const Home = () => {
   const [showStartup, setShowStartup] = useState(true);
   const { ref, inView } = useInView({
-    threshold: 0.1
+    threshold: 0
   });
-  const content = useRef(null);
+  const work = useRef(null);
 
   if (showStartup)
     return (
@@ -23,9 +25,12 @@ const Home = () => {
 
   return (
     <div className="home">
-      <Navbar show={inView}></Navbar>
+      <Navbar show={!inView}></Navbar>
       <div className="hero-space">
-        <div className={`banner__${inView ? 'unfocused' : 'focused'}`}>
+        <div
+          ref={ref}
+          className={`banner__${!inView ? 'unfocused' : 'focused'}`}
+        >
           <img
             src={BackgroundImage}
             className="landscape"
@@ -40,35 +45,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="container" ref={ref}>
-        <section ref={content}>
-          <div>{`${inView}`}</div>
-          <div>test</div>
-          <div>hello</div>
-          <div>test</div>
-          <div>hello</div>
-          <div>test</div>
-          <div>hello</div>
-          <div>test</div>
-          <div>hello</div>
-          <div>test</div>
-          <div>hello</div>
-          <div>test</div>
-          <div>hello</div>
-          <div>test</div>
-          <div>hello</div>
-          <div>test</div>
-          <div>hello</div>
-          <div>test</div>
-          <div>hello</div>
-          <div>test</div>
-          <div>hello</div>
-          <div>test</div>
-          <div>hello</div>
-          <div>test</div>
-          <div>hello</div>
-          <div>test</div>
-          <div>hello</div>
+      <div className="container">
+        <section className="work" ref={work}>
+          <img src={DaxaImage}></img>
+          <p>daxa is daxa</p>
         </section>
       </div>
     </div>

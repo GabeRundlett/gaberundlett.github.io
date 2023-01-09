@@ -27,17 +27,22 @@
   margin: 0;
   height: 100%;
   display: flex;
+  align-items: center;
   width: fit-content;
   padding: 0px 10px;
-  border-bottom-left-radius: 8px;
-  background-color: #dbe5f0;
-  border-bottom-right-radius: 8px;
-  outline: 1px rgba(255, 255, 255, 50%) solid;
+  line-height: 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #6169f5;
+  color: white;
+  outline: 1px rgba(255, 255, 255, 10%) solid;
   outline-offset: -1px;
   gap: 10px;
   font-size: 20px;
 }
 
-.navbar_show .content li,
-.navbar__show .content li {
+.navbar__show .content li,
+.navbar__hide .content li {
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
 }
