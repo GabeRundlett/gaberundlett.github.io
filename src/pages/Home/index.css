@@ -77,30 +77,34 @@
   flex-direction: column;
 }
 
-.home .container section {
-  padding: 10px;
-  box-sizing: border-box;
-  margin: 10px;
-  border-radius: 10px;
-  background: var(--blurple);
-  border: 1px rgba(255, 255, 255, 30%) solid;
-  outline-offset: -1px;
+.home .container .title {
+  margin-top: 64px;
+  margin-bottom: 20px;
   width: 100%;
-  max-width: var(--section-max-width);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
-.home .container .work {
-  display: grid;
-  height: 400px;
-  grid-template-columns: 1fr 1fr;
+.home .container .title .line {
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  width: 90%;
+  height: 1px;
 }
 
-.home .container .work img {
-  min-width: 0;
-  min-height: 0;
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
+.home .container .title h1 {
+  margin: 0;
+  padding: 0 10px;
+  z-index: 0;
+  background-color: var(--blurple-hard);
+  color: white;
+  font-size: 25px;
 }
 
 @keyframes fadeText {
