@@ -5,7 +5,7 @@ interface INavbar {
   show: boolean;
 }
 
-const Navbar = ({ show }: INavbar) => {
+const Navbar = ({ show = false }: INavbar) => {
   return ReactDOM.createPortal(
     <div className={`navbar__${show ? 'show' : 'hide'}`}>
       <ul className="content">

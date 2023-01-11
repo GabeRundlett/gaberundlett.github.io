@@ -18,6 +18,7 @@ const Home = () => {
   const WIDTH_TO_CHANGE_IMAGE = 800;
 
   const { ref, inView } = useInView({
+    initialInView: true,
     threshold: 0
   });
   const work = useRef(null);
@@ -34,11 +35,8 @@ const Home = () => {
   return (
     <div className="home">
       <Navbar show={!inView}></Navbar>
-      <div className="hero-space">
-        <div
-          ref={ref}
-          className={`banner__${!inView ? 'unfocused' : 'focused'}`}
-        >
+      <div className="hero-space" ref={ref}>
+        <div className={`banner__${!inView ? 'unfocused' : 'focused'}`}>
           <img
             src={BackgroundImage}
             className="landscape"
@@ -59,7 +57,7 @@ const Home = () => {
           <h1>My Recent Works</h1>
         </div>
         <WorkCard
-          image={windowWidth <= 800 ? DesktopDaxaImage : MobileDaxaImage}
+          image={windowWidth <= 800 ? MobileDaxaImage : DesktopDaxaImage}
           title="Daxa"
         >
           Daxa is a GPU API based on Vulkan, designed by Patrick Ahrens and
