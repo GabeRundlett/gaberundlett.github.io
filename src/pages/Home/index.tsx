@@ -36,7 +36,7 @@ const Home = () => {
     <div className="home">
       <Navbar show={!inView}></Navbar>
       <div className="hero-space" ref={ref}>
-        <div className={`banner__${!inView ? 'unfocused' : 'focused'}`}>
+        <div className={`banner__${inView ? 'focused' : 'unfocused'}`}>
           <img
             src={BackgroundImage}
             className="landscape"
@@ -52,20 +52,30 @@ const Home = () => {
         </div>
       </div>
       <div className="container">
-        <div className="title">
-          <div className="line"></div>
-          <h1>My Recent Works</h1>
+        <div className="work-info">
+          <div className="title">
+            <div className="line"></div>
+            <h1>My Recent Works</h1>
+          </div>
+          <WorkCard
+            image={
+              windowWidth <= WIDTH_TO_CHANGE_IMAGE
+                ? MobileDaxaImage
+                : DesktopDaxaImage
+            }
+            title="Daxa"
+          >
+            Daxa is a GPU API based on Vulkan, designed by Patrick Ahrens and
+            co-developed by me
+          </WorkCard>
+          <WorkCard image={BackgroundImage} title="Gvox Engine">
+            Gvox Engine is a raytraced voxel engine built to utilize the GPU as
+            much as possible, Gvox Engine is being developed along side the{' '}
+            <b>Gvox Format</b> library, which can convert between many voxel
+            file formats, standard and custom. both Gvox and the Gvox Engine are
+            Open-source
+          </WorkCard>
         </div>
-        <WorkCard
-          image={windowWidth <= 800 ? MobileDaxaImage : DesktopDaxaImage}
-          title="Daxa"
-        >
-          Daxa is a GPU API based on Vulkan, designed by Patrick Ahrens and
-          co-developed by me
-        </WorkCard>
-        <WorkCard image={BackgroundImage} title="Voxel Engine">
-          made with c++ :(
-        </WorkCard>
       </div>
     </div>
   );

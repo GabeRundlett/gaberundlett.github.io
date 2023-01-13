@@ -20,6 +20,7 @@ const ImguiWindow = (window: ImguiWindowProps) => {
 
   return (
     <Draggable
+      cancel=".btn"
       disabled={window.windowType === 'windowed' ? false : true}
       nodeRef={nodeRef}
       position={window.windowType === 'fullscreen' ? { x: 0, y: 0 } : undefined}

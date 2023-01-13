@@ -33,6 +33,7 @@ const Startup = ({ onClick }: IStartup) => {
             with code in my free-time
           </h2>
           <button
+            className="btn"
             onClick={() => {
               if (!isDragging) changeWindow();
             }}

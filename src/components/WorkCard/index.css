@@ -1,12 +1,11 @@
 .workcard {
   box-sizing: border-box;
-  margin: 10px;
+  margin: 20px 0;
   border-radius: 10px;
   background: var(--blurple);
   border: 1px rgba(255, 255, 255, 30%) solid;
   outline-offset: -1px;
   width: 100%;
-  max-width: var(--section-max-width);
 }
 
 .workcard .items {
@@ -28,13 +27,23 @@
 }
 
 .workcard .info {
-  padding: 10px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
+}
+
+.workcard .info h1 {
+  font-weight: 600;
+  font-size: 38px;
+}
+
+.workcard .info h3 {
+  font-size: 20px;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 800px) {
@@ -58,12 +67,29 @@
   }
 
   .workcard .info {
-    padding: 0px;
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
+  }
+
+  .workcard .info h1 {
+    margin: 0;
+  }
+
+  .workcard .info h3 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .workcard .info h3 {
+    font-size: 14px;
   }
 }
