@@ -9,7 +9,7 @@ interface IWorkCard {
 
 const WorkCard = ({ image, title, children }: IWorkCard) => {
   return (
-    <section className="workcard">
+    <div className="workcard">
       <div className="items">
         <img className="thumbnail" src={image}></img>
         <div className="info">
@@ -17,7 +17,7 @@ const WorkCard = ({ image, title, children }: IWorkCard) => {
           <h3>{children}</h3>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

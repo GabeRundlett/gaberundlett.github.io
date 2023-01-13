@@ -9,6 +9,7 @@ import DesktopDaxaImage from '../../assets/images/desktop/daxa-logo.png';
 import MobileDaxaImage from '../../assets/images/mobile/daxa-logo.png';
 import WorkCard from '../../components/WorkCard';
 import { useWindowWidth } from '../../hooks/useWindowWidth';
+import YoutubeEmbed from '../../components/YoutubeEmbed';
 
 const Home = () => {
   const [showStartup, setShowStartup] = useState(true);
@@ -52,7 +53,7 @@ const Home = () => {
         </div>
       </div>
       <div className="container">
-        <div className="work-info">
+        <section className="work-info">
           <div className="title">
             <div className="line"></div>
             <h1>My Recent Works</h1>
@@ -75,7 +76,20 @@ const Home = () => {
             file formats, standard and custom. both Gvox and the Gvox Engine are
             Open-source
           </WorkCard>
-        </div>
+        </section>
+        <section className="social-info">
+          <div className="title">
+            <div className="line"></div>
+            <h1>Social</h1>
+          </div>
+          <YoutubeEmbed></YoutubeEmbed>
+        </section>
+        <section className="contact-info">
+          <div className="title">
+            <div className="line"></div>
+            <h1>Contact</h1>
+          </div>
+        </section>
       </div>
     </div>
   );
