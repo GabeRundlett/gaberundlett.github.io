@@ -1,4 +1,5 @@
 .contact-card {
+  margin: 20px 0;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr;

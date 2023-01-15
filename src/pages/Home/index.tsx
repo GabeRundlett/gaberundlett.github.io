@@ -98,7 +98,7 @@ const Home = () => {
         </section>
         <section className="contact-info" ref={contactLocation}>
           <InfoHeader title={'Contact'}>Talk to me</InfoHeader>
-          <ContactCard></ContactCard>
+          <ContactCard />
         </section>
       </div>
     </div>
