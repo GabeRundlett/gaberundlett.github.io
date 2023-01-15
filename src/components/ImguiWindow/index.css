@@ -1,0 +1,94 @@
+.imgui-window__windowed {
+  position: absolute;
+  display: flex;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px;
+  width: 590px;
+  height: 380px;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: #18181c;
+  outline: 1px rgb(255, 255, 255, 20%) solid;
+  outline-offset: -1px;
+  animation: window-pop ease-out 0.4s;
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  transition: width var(--test), height var(--test) transform var(--test);
+}
+
+.imgui-window__windowed:hover {
+  cursor: grab;
+}
+
+.imgui-window__windowed:active {
+  cursor: grabbing;
+}
+
+.imgui-window__fullscreen {
+  position: absolute;
+  display: flex;
+  z-index: 10;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  background-color: #18181c;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  transition: width var(--openTime), height var(--openTime),
+    transform var(--openTime);
+}
+
+.imgui-window__topbar__windowed {
+  display: flex;
+  gap: 6px;
+  overflow: hidden;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #606be2;
+  height: 29px;
+  align-items: center;
+}
+
+.imgui-window__topbar__windowed .triangle {
+  margin-left: 8px;
+  width: 0;
+  height: 0;
+  border-top: 12px solid rgba(255, 255, 255, 80%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+.imgui-window__topbar__windowed h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  font-size: 15px;
+}
+
+.imgui-window__topbar__fullscreen {
+  display: none;
+}
+
+@keyframes window-pop {
+  0% {
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 100%);
+    width: 64px;
+    height: 32px;
+    opacity: 0%;
+    outline: 1px #535362 solid;
+  }
+
+  100% {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: visible;
+    margin-top: 0px;
+  }
+}

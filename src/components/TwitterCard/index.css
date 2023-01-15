@@ -1,0 +1,104 @@
+.social-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 8px;
+  background-color: var(--blurple);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 20px;
+  border: 1px rgba(255, 255, 255, 30%) solid;
+}
+
+.social-card .hello {
+  position: relative;
+  display: flex;
+}
+
+.social-card .hello img {
+  border-radius: 100%;
+  width: 64px;
+  height: 64px;
+}
+
+.social-card .message p {
+  color: var(--blurple-hard);
+  position: absolute;
+  top: -30px;
+  left: 60px;
+  margin: 0;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.social-card .message p:before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 24px solid #fff;
+  border-right: 12px solid transparent;
+  border-top: 2px solid #fff;
+  border-bottom: 20px solid transparent;
+  left: 0px;
+  bottom: -14px;
+}
+
+.social-card .fact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-card .fact h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.social-card .fact b {
+  font-weight: 800;
+}
+
+.social-card .fact .heart {
+  display: flex;
+  color: rgb(255, 140, 240);
+}
+
+.social-card .follow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+}
+
+.social-card .follow .embed {
+  background-color: white;
+  text-decoration: none;
+  color: var(--blurple-hard);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0px;
+  border-radius: 30px;
+  transition: background 0.2s;
+}
+
+.social-card .follow .embed:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: background 0.2s;
+}
+
+@media only screen and (max-width: 600px) {
+  .social-card {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .social-card .message {
+    display: none;
+  }
+}
