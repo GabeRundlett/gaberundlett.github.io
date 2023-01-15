@@ -3,6 +3,7 @@ import './index.css';
 import Startup from '../../components/Startup';
 import { useInView } from 'react-intersection-observer';
 import Navbar from '../../components/Navbar';
+import { ChevronDoubleDown } from 'heroicons-react';
 
 import BackgroundImage from '../../assets/images/voxel-world.png';
 import DesktopDaxaImage from '../../assets/images/desktop/daxa-logo.png';
@@ -25,9 +26,12 @@ const Home = () => {
     initialInView: true,
     threshold: 0
   });
-  const workLocation = useRef<null | HTMLDivElement>(null);
-  const socialLocation = useRef<null | HTMLDivElement>(null);
-  const contactLocation = useRef<null | HTMLDivElement>(null);
+
+  type divElement = null | HTMLDivElement;
+  const workLocation = useRef<divElement>(null);
+  const socialLocation = useRef<divElement>(null);
+  const contactLocation = useRef<divElement>(null);
+  const info = useRef<divElement>(null);
 
   if (showStartup && windowWidth > MINIMUM_WIDTH_TO_SHOW_STARTUP)
     return (
@@ -60,9 +64,15 @@ const Home = () => {
               with code in my free-time
             </h3>
           </div>
+          <ChevronDoubleDown
+            className="scrolldown"
+            onClick={() => {
+              info.current?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          />
         </div>
       </div>
-      <div className="container">
+      <div className="container" ref={info}>
         <section className="work-info" ref={workLocation}>
           <InfoHeader title={'Recent Works'}>
             {"Things I'm working on"}

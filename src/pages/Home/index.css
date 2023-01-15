@@ -1,4 +1,14 @@
-.home {
+.scrolldown {
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
+  z-index: 100;
+  color: white;
+  animation: moveUpDown 1s infinite;
 }
 
 .home .hero-space {
@@ -68,7 +78,6 @@
   color: #fff;
   white-space: nowrap;
   animation: moveText 0.5s forwards;
-  padding: 10px 0;
 }
 
 .home .container {
@@ -150,11 +159,21 @@
 
   100% {
     display: flex;
-    padding-top: 4px;
-    font-size: calc(8px + 1vw);
+    padding: 4px 0;
+    font-size: calc(7px + 1vw);
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2px);
     outline: 1px rgb(255, 255, 255, 0.3) solid;
     outline-offset: -1px;
+  }
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    bottom: 10px;
+  }
+  50% {
+    bottom: 20px;
   }
 }
