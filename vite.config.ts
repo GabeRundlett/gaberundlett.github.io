@@ -5,5 +5,8 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/gaberundlett.github.io/',
-  plugins: [react(), eslintPlugin()]
+  plugins: [react(), eslintPlugin()],
+  build: {
+    outDir: './docs'
+  }
 });
