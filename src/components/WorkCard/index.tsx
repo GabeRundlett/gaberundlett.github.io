@@ -7,18 +7,16 @@ interface IWorkCard {
   children: ReactNode;
 }
 
-const WorkCard = ({ image, title, children }: IWorkCard) => {
-  return (
-    <div className="workcard">
-      <div className="items">
-        <img className="thumbnail" src={image}></img>
-        <div className="info">
-          <h1>{title}</h1>
-          <h3>{children}</h3>
-        </div>
+const WorkCard = ({ image, title, children }: IWorkCard) => (
+  <div className="workcard">
+    <div className="items">
+      <img className="thumbnail" src={image}></img>
+      <div className="info">
+        <h1>{title}</h1>
+        <h3>{children}</h3>
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default WorkCard;

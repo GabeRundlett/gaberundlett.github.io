@@ -1,24 +1,45 @@
 import './index.css';
 import ReactDOM from 'react-dom';
 import { Briefcase, ThumbUp, Chat } from 'heroicons-react';
+import { MutableRefObject, useRef } from 'react';
 
 interface INavbar {
   show: boolean;
+  workLocation: MutableRefObject<null | HTMLDivElement>;
+  socialLocation: MutableRefObject<null | HTMLDivElement>;
+  contactLocation: MutableRefObject<null | HTMLDivElement>;
 }
 
-const Navbar = ({ show = false }: INavbar) => {
+const Navbar = ({
+  show,
+  workLocation,
+  socialLocation,
+  contactLocation
+}: INavbar) => {
   return ReactDOM.createPortal(
     <div className={`navbar__${show ? 'show' : 'hide'}`}>
       <ul className="content">
-        <li>
-          <Briefcase></Briefcase>
+        <li
+          onClick={() => {
+            workLocation.current?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          <Briefcase />
           Work
         </li>
-        <li>
-          <ThumbUp></ThumbUp>
+        <li
+          onClick={() => {
+            socialLocation.current?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          <ThumbUp />
           Social
         </li>
-        <li>
+        <li
+          onClick={() => {
+            contactLocation.current?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
           <Chat />
           Contact
         </li>

@@ -47,19 +47,19 @@
   transition: opacity 0.5s;
 }
 
-.banner__focused h1,
-.banner__unfocused h1 {
+.banner__focused .name,
+.banner__unfocused .name {
   text-align: center;
   color: #fff;
   margin: 0;
-  font-size: calc(28px + 4vw);
+  font-size: calc(24px + 4vw);
   animation: fadeText 0.5s forwards;
 }
 
-.banner__focused h2,
-.banner__unfocused h2 {
+.banner__focused .phrase,
+.banner__unfocused .phrase {
   font-family: 'Montserrat', sans-serif;
-  font-size: calc(8px + 1vw);
+  font-size: calc(10px + 0.2vw);
   text-align: center;
   margin: 0;
   color: #fff;
@@ -79,36 +79,6 @@
   flex-direction: column;
 }
 
-.home .container .title {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-}
-
-.home .container .title .line {
-  position: absolute;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  width: 90%;
-  height: 1px;
-}
-
-.home .container .title h1 {
-  white-space: nowrap;
-  margin: 0;
-  padding: 0 10px;
-  z-index: 0;
-  background-color: var(--blurple-hard);
-  color: white;
-  font-size: 40px;
-  margin-bottom: 12px;
-}
-
 .home .container section {
   width: 100%;
   height: fit-content;
@@ -118,6 +88,33 @@
   justify-content: center;
   align-items: center;
   margin-top: 64px;
+}
+
+.video {
+  border-radius: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  color: white;
+  margin: 20px 0;
+}
+
+.video-title {
+  gap: 10px;
+  display: inline-flex;
+}
+
+.video h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0;
+}
+
+.contact-info {
+  margin-bottom: 30px;
 }
 
 @keyframes fadeText {
@@ -143,18 +140,12 @@
 
 @keyframes moveText {
   0% {
-    padding-top: 0px;
   }
 
   100% {
+    display: flex;
     padding-top: 4px;
-    font-size: calc(10px + 1vw);
+    font-size: calc(8px + 1vw);
     text-shadow: 0px 2px rgb(59, 59, 59);
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .home .container .title h1 {
-    font-size: calc(10px + 3vw);
   }
 }

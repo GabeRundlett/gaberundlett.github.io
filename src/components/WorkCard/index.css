@@ -33,7 +33,7 @@
 .workcard .info {
   border-top-right-radius: var(--rounded-border);
   border-bottom-right-radius: var(--rounded-border);
-  padding: 40px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,6 +43,7 @@
 }
 
 .workcard .info h1 {
+  margin: 0;
   font-weight: 700;
   font-size: 38px;
 }

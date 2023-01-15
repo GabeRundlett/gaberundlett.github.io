@@ -1,0 +1,51 @@
+.info-header {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.info-header .title {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-header .title .line {
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  width: 90%;
+  height: 1px;
+}
+
+.info-header .title h1 {
+  text-transform: uppercase;
+  padding: 0 20px;
+  white-space: nowrap;
+  margin: 0;
+  background-color: var(--blurple-hard);
+  color: white;
+  z-index: 0;
+  font-size: 40px;
+}
+
+.info-header h2 {
+  margin: 0;
+  color: white;
+  font-size: 22px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (max-width: 800px) {
+  .info-header .title h1 {
+    font-size: calc(12px + 3vw);
+  }
+}
