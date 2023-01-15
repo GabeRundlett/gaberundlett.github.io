@@ -92,7 +92,7 @@ const Home = () => {
             <div className="video-title">
               <h1>Check my latest video:</h1>
             </div>
-            {/* <YoutubeEmbed /> */}
+            <YoutubeEmbed />
           </div>
           <TwitterCard></TwitterCard>
         </section>
