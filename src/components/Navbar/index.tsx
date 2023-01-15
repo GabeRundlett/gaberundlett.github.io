@@ -1,7 +1,7 @@
 import './index.css';
 import ReactDOM from 'react-dom';
 import { Briefcase, ThumbUp, Chat } from 'heroicons-react';
-import { MutableRefObject, useRef } from 'react';
+import { MutableRefObject } from 'react';
 
 interface INavbar {
   show: boolean;
