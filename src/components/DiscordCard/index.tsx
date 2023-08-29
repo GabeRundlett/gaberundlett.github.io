@@ -10,7 +10,7 @@ const DiscordCard = () => (
           className="members"
           width={119}
           height={20}
-          src="https://discord.com/api/guilds/985017702433316924/widget.png?style=shield"
+          src="https://discordapp.com/api/guilds/985017702433316924/widget.png?style=shield"
           sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
         />
       </div>

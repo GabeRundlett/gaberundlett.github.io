@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import './index.css';
 
-import { Mail } from 'heroicons-react';
+import { EnvelopeIcon } from '@heroicons/react/24/solid'
+
 
 const EmailCard = () => {
   const [textState, setTextState] = useState<'Copy to Clipboard' | 'Copied!'>(
@@ -18,7 +19,7 @@ const EmailCard = () => {
     <div className="email">
       <div className="email-topbar">
         <h1>
-          <Mail />
+          <EnvelopeIcon />
           Email
         </h1>
         <p>gabe@rundlett.com</p>
