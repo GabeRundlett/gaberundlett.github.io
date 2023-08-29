@@ -1,7 +1,7 @@
 import './index.css';
 import GabeProfilePic from '../../assets/images/gabe.png';
 
-import { Heart } from 'heroicons-react';
+import { HeartIcon } from '@heroicons/react/24/solid'
 
 const TwitterCard = () => (
   <div className="social-card">
@@ -14,7 +14,7 @@ const TwitterCard = () => (
         <h1>
           I love <b>Vulkan</b>
         </h1>
-        <Heart className="heart"></Heart>
+        <HeartIcon className="heart"></HeartIcon>
       </div>
     </div>
     <div className="follow">

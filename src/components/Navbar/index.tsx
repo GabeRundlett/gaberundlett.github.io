@@ -1,6 +1,7 @@
 import './index.css';
 import ReactDOM from 'react-dom';
-import { Briefcase, ThumbUp, Chat } from 'heroicons-react';
+// import { Briefcase, ThumbUp, Chat } from 'heroicons-react';
+import { BriefcaseIcon, HandThumbUpIcon, ChatBubbleLeftIcon } from '@heroicons/react/24/solid'
 import { MutableRefObject } from 'react';
 
 interface INavbar {
@@ -24,7 +25,7 @@ const Navbar = ({
             workLocation.current?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
-          <Briefcase />
+          <BriefcaseIcon />
           Work
         </li>
         <li
@@ -32,7 +33,7 @@ const Navbar = ({
             socialLocation.current?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
-          <ThumbUp />
+          <HandThumbUpIcon />
           Social
         </li>
         <li
@@ -40,7 +41,7 @@ const Navbar = ({
             contactLocation.current?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
-          <Chat />
+          <ChatBubbleLeftIcon />
           Contact
         </li>
       </ul>

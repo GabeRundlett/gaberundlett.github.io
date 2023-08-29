@@ -3,7 +3,7 @@ import './index.css';
 import Startup from '../../components/Startup';
 import { useInView } from 'react-intersection-observer';
 import Navbar from '../../components/Navbar';
-import { ChevronDoubleDown } from 'heroicons-react';
+import { ChevronDoubleDownIcon } from '@heroicons/react/24/solid'
 
 import BackgroundImage from '../../assets/images/voxel-world.png';
 import DesktopDaxaImage from '../../assets/images/desktop/daxa-logo.png';
@@ -64,7 +64,7 @@ const Home = () => {
               with code in my free-time
             </h3>
           </div>
-          <ChevronDoubleDown
+          <ChevronDoubleDownIcon
             className="scrolldown"
             onClick={() => {
               info.current?.scrollIntoView({ behavior: 'smooth' });
