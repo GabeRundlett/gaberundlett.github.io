@@ -3,11 +3,12 @@ import './index.css';
 import Startup from '../../components/Startup';
 import { useInView } from 'react-intersection-observer';
 import Navbar from '../../components/Navbar';
-import { ChevronDoubleDownIcon } from '@heroicons/react/24/solid'
+import { ChevronDoubleDownIcon } from '@heroicons/react/24/solid';
 
 import BackgroundImage from '../../assets/images/voxel-world.png';
 import DesktopDaxaImage from '../../assets/images/desktop/daxa-logo.png';
 import MobileDaxaImage from '../../assets/images/mobile/daxa-logo.png';
+import ShadertoyImage from '../../assets/images/desktop-shadertoy.png';
 import WorkCard from '../../components/WorkCard';
 import { useWindowWidth } from '../../hooks/useWindowWidth';
 import YoutubeEmbed from '../../components/YoutubeEmbed';
@@ -60,8 +61,8 @@ const Home = () => {
           <div className="text">
             <h1 className="name">Gabe Rundlett</h1>
             <h3 className="phrase">
-              I am a young software engineer who loves <br /> making cool things
-              with code in my free-time
+              I am a software engineer who loves <br /> making cool things with
+              code in my free-time
             </h3>
           </div>
           <ChevronDoubleDownIcon
@@ -77,6 +78,11 @@ const Home = () => {
           <InfoHeader title={'Recent Works'}>
             {"Things I'm working on"}
           </InfoHeader>
+          <WorkCard image={ShadertoyImage} title="Desktop Shadertoy">
+            Desktop Shadertoy is a desktop client application for Shadertoy
+            projects, allowing enthusiasts to open Shadertoys in profilers and
+            graphics debuggers like Renderdoc or NVIDIA NSight
+          </WorkCard>
           <WorkCard image={BackgroundImage} title="Gvox Engine">
             Gvox Engine is a raytraced voxel engine built to utilize the GPU as
             much as possible, Gvox Engine is being developed along side the{' '}

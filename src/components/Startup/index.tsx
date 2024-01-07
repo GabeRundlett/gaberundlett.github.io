@@ -29,7 +29,7 @@ const Startup = ({ onClick }: IStartup) => {
       >
         <div className={`imgui-window__content__${windowType}`}>
           <h2 className="text">
-            I am a young software engineer who loves <br /> making cool things
+            I am a software engineer who loves <br /> making cool things
             with code in my free-time
           </h2>
           <button
